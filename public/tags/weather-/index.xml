@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Weather  on Portfolio</title>
+    <link>http://localhost:52413/tags/weather-/</link>
+    <description>Recent content in Weather  on Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 01 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:52413/tags/weather-/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Live Weather Forecast Program</title>
+      <link>http://localhost:52413/posts/math-typesetting/</link>
+      <pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:52413/posts/math-typesetting/</guid>
+      <description>Implemented Shell commands in Linux for generating live weather forecasts. Enabled user input of zip codes to fetch real-time data and display current conditions. Provided concise forecast summaries for enhanced user experience.&#xA;NOTE. For more information on how the program works, read the provided text and images below:&#xA;SOURCE CODE. The following is written in C programming language and interpreted using gcc compiler:&#xA;#!/bin/sh # Globals URL=&amp;#34;https://forecast.weather.gov/zipcity.php&amp;#34; ZIPCODE=46556 FORECAST=0 CELSIUS=0 # Functions usage() { cat 1&amp;gt;&amp;amp;2 &amp;lt;&amp;lt;EOF Usage: $(basename $0) [zipcode] -c Use Celsius degrees instead of Fahrenheit for temperature -f Display forecast text after the temperature If zipcode is not provided, then it defaults to $ZIPCODE.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Ignacio Sadurni</title>
+    <link>http://localhost:61406/tags/</link>
+    <description>Recent content in Tags on Ignacio Sadurni</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 15 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:61406/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ColorStack</title>
+      <link>http://localhost:61406/tags/colorstack/</link>
+      <pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:61406/tags/colorstack/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CSS</title>
+      <link>http://localhost:61406/tags/css/</link>
+      <pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:61406/tags/css/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>HTML</title>
+      <link>http://localhost:61406/tags/html/</link>
+      <pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:61406/tags/html/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Systems Programming</title>
+      <link>http://localhost:61406/tags/systems-programming/</link>
+      <pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:61406/tags/systems-programming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Website</title>
+      <link>http://localhost:61406/tags/website/</link>
+      <pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:61406/tags/website/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CS for Good</title>
+      <link>http://localhost:61406/tags/cs-for-good/</link>
+      <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:61406/tags/cs-for-good/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>http://localhost:61406/tags/python/</link>
+      <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:61406/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Shell Script</title>
+      <link>http://localhost:61406/tags/shell-script/</link>
+      <pubDate>Sat, 10 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:61406/tags/shell-script/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>C</title>
+      <link>http://localhost:61406/tags/c/</link>
+      <pubDate>Fri, 15 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:61406/tags/c/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fundamentals of Computing</title>
+      <link>http://localhost:61406/tags/fundamentals-of-computing/</link>
+      <pubDate>Fri, 15 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:61406/tags/fundamentals-of-computing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>XQuartz</title>
+      <link>http://localhost:61406/tags/xquartz/</link>
+      <pubDate>Fri, 15 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:61406/tags/xquartz/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Engineering Computing</title>
+      <link>http://localhost:61406/tags/engineering-computing/</link>
+      <pubDate>Wed, 15 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:61406/tags/engineering-computing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MATLAB</title>
+      <link>http://localhost:61406/tags/matlab/</link>
+      <pubDate>Wed, 15 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:61406/tags/matlab/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MATLAB App Designer</title>
+      <link>http://localhost:61406/tags/matlab-app-designer/</link>
+      <pubDate>Wed, 15 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:61406/tags/matlab-app-designer/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

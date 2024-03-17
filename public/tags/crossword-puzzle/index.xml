@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Crossword Puzzle on Portfolio</title>
+    <link>http://localhost:55793/tags/crossword-puzzle/</link>
+    <description>Recent content in Crossword Puzzle on Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 01 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:55793/tags/crossword-puzzle/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Crossword Puzzle</title>
+      <link>http://localhost:55793/posts/emoji-support/</link>
+      <pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:55793/posts/emoji-support/</guid>
+      <description>Developed a Crossword Puzzle Generator in C, allowing user word inputs for puzzle creation Implemented functionality to generate puzzles, solutions, and scrambled clues. Streamlined solving experience for users with seamless puzzle generation and solution presentation.&#xA;NOTE. For more information on how the program works, read the provided text and images below:&#xA;Info How does it work?&#xA;The program first prompts the user to enter a list of appropriate words. This can be done by entering them in the command line, or passing them in through a .</description>
+    </item>
+  </channel>
+</rss>

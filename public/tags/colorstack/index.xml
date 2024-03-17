@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ColorStack on Ignacio Sadurni</title>
+    <link>http://localhost:61406/tags/colorstack/</link>
+    <description>Recent content in ColorStack on Ignacio Sadurni</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 15 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:61406/tags/colorstack/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Personal Website</title>
+      <link>http://localhost:61406/posts/personal-website/</link>
+      <pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:61406/posts/personal-website/</guid>
+      <description>Needed a platform to showcase professional skills, projects, and accomplishments to potential employers or clients. Utilized Hugo for content management and rapid site generation, alongside HTML and CSS for website structuring and styling. Successfully developed a fast-loading, aesthetically pleasing personal portfolio website that effectively highlights web development proficiency and design capabilities.&#xA;NOTE. If you are reading this then you are currently browsing this project.</description>
+    </item>
+  </channel>
+</rss>

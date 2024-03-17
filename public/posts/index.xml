@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Ignacio Sadurni</title>
+    <link>http://localhost:61406/posts/</link>
+    <description>Recent content in Posts on Ignacio Sadurni</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 15 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:61406/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Personal Website</title>
+      <link>http://localhost:61406/posts/personal-website/</link>
+      <pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:61406/posts/personal-website/</guid>
+      <description>Needed a platform to showcase professional skills, projects, and accomplishments to potential employers or clients. Utilized Hugo for content management and rapid site generation, alongside HTML and CSS for website structuring and styling. Successfully developed a fast-loading, aesthetically pleasing personal portfolio website that effectively highlights web development proficiency and design capabilities.&#xA;NOTE. If you are reading this then you are currently browsing this project.</description>
+    </item>
+    <item>
+      <title>De Paul Coding Academy</title>
+      <link>http://localhost:61406/posts/coding-academy/</link>
+      <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:61406/posts/coding-academy/</guid>
+      <description>CS for Good aims to solve all sorts of issues within the local community. This project was devised in order to help underprivilidged students by empowering them with skills allowing them to succeed professionally. The De Paul Academy hosts teenagers which have exhibited a background of delinquent behaviors, and by teaching these kids Python, they will have the technical skills and ingenuity to foster greater opportunities. As a member of the team, we are responsible for making presentations and tailoring a plan every week, visiting the students on Sundays to teach them Python from scartch.</description>
+    </item>
+    <item>
+      <title>Live Weather Forecast</title>
+      <link>http://localhost:61406/posts/weather-script/</link>
+      <pubDate>Sat, 10 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:61406/posts/weather-script/</guid>
+      <description>Implemented Shell commands in Linux for generating live weather forecasts. Enabled user input of zip codes to fetch real-time data and display current conditions. Provided concise forecast summaries for enhanced user experience.&#xA;NOTE. For more information on how the program works, read the provided text and code below:&#xA;Info How does it work?&#xA;The program is executed in linux and displays the weather information. Inputting flags as arguments, the user can change between farenheit and celcius.</description>
+    </item>
+    <item>
+      <title>Flappy Ball Game</title>
+      <link>http://localhost:61406/posts/flappy-ball/</link>
+      <pubDate>Fri, 15 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:61406/posts/flappy-ball/</guid>
+      <description>Designed Flappy Bird game in C, incorporating player controls, obstacle generation, and scoring mechanics. Implemented XQuartz for graphics and animations, enhancing visual experience. Implemented precise collision detection to ensure accurate interaction between player and obstacles.&#xA;NOTE. For more information on how the game works, read the info below:&#xA;SOURCE CODE. The following is written in C programming language and interpreted using gcc compiler:&#xA;Makefile project: project.c gcc project.c gfx2.o -lX11 -lm -o project clean: rm project Main Driver // Author: Ignacio Sadurni // Date: 12.</description>
+    </item>
+    <item>
+      <title>Crossword Puzzle Generator</title>
+      <link>http://localhost:61406/posts/crossword-puzzle/</link>
+      <pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:61406/posts/crossword-puzzle/</guid>
+      <description>Developed a Crossword Puzzle Generator in C, allowing user word inputs for puzzle creation Implemented functionality to generate puzzles, solutions, and scrambled clues. Streamlined solving experience for users with seamless puzzle generation and solution presentation.&#xA;NOTE. For more information on how the program works, read the provided text and images below:&#xA;Info How does it work?&#xA;The program first prompts the user to enter a list of appropriate words. This can be done by entering them in the command line, or passing them in through a .</description>
+    </item>
+    <item>
+      <title>Aviation Crash Report App</title>
+      <link>http://localhost:61406/posts/aviation-app/</link>
+      <pubDate>Wed, 15 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:61406/posts/aviation-app/</guid>
+      <description>Utilized MATLAB and its App Designer to develop an app for analyzing historical aviation accidents. Generated comprehensive reports on various statistics derived from global aviation accidents data. Enhanced understanding of aviation safety and trends throughout history through detailed analysis and visualization of accident data.&#xA;NOTE. For more information on how the app works, watch the demo below:</description>
+    </item>
+  </channel>
+</rss>

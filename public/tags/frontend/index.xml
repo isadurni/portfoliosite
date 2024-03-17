@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Frontend on Ignacio Sadurni</title>
+    <link>http://localhost:57311/tags/frontend/</link>
+    <description>Recent content in Frontend on Ignacio Sadurni</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 08 Jul 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:57311/tags/frontend/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Personal Website</title>
+      <link>http://localhost:57311/posts/personal-website/</link>
+      <pubDate>Sat, 08 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:57311/posts/personal-website/</guid>
+      <description>Needed a platform to showcase professional skills, projects, and accomplishments to potential employers or clients. Utilized Hugo for content management and rapid site generation, alongside HTML and CSS for website structuring and styling. Successfully developed a fast-loading, aesthetically pleasing personal website portfolio that effectively highlights web development proficiency and design capabilities.&#xA;NOTE. For more information on how the program works, read the provided text and images below:</description>
+    </item>
+  </channel>
+</rss>

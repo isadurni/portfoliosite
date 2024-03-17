@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Ignacio Sadurni</title>
+    <link>http://localhost:61406/tags/python/</link>
+    <description>Recent content in Python on Ignacio Sadurni</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 10 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:61406/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>De Paul Coding Academy</title>
+      <link>http://localhost:61406/posts/coding-academy/</link>
+      <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:61406/posts/coding-academy/</guid>
+      <description>CS for Good aims to solve all sorts of issues within the local community. This project was devised in order to help underprivilidged students by empowering them with skills allowing them to succeed professionally. The De Paul Academy hosts teenagers which have exhibited a background of delinquent behaviors, and by teaching these kids Python, they will have the technical skills and ingenuity to foster greater opportunities. As a member of the team, we are responsible for making presentations and tailoring a plan every week, visiting the students on Sundays to teach them Python from scartch.</description>
+    </item>
+  </channel>
+</rss>

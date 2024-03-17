@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=55793&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  Crossword Puzzle Generator · Portfolio
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Ignacio Sadurní">
+<meta name="description" content="Developed a Crossword Puzzle Generator in C, allowing user word inputs for puzzle creation Implemented functionality to generate puzzles, solutions, and scrambled clues. Streamlined solving experience for users with seamless puzzle generation and solution presentation.
+NOTE. For more information on how the program works, read the provided text and images below:
+Info How does it work?
+The program first prompts the user to enter a list of appropriate words. This can be done by entering them in the command line, or passing them in through a .">
+<meta name="keywords" content="blog,developer,personal">
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Crossword Puzzle Generator"/>
+<meta name="twitter:description" content="Developed a Crossword Puzzle Generator in C, allowing user word inputs for puzzle creation Implemented functionality to generate puzzles, solutions, and scrambled clues. Streamlined solving experience for users with seamless puzzle generation and solution presentation.
+NOTE. For more information on how the program works, read the provided text and images below:
+Info How does it work?
+The program first prompts the user to enter a list of appropriate words. This can be done by entering them in the command line, or passing them in through a ."/>
+
+<meta property="og:title" content="Crossword Puzzle Generator" />
+<meta property="og:description" content="Developed a Crossword Puzzle Generator in C, allowing user word inputs for puzzle creation Implemented functionality to generate puzzles, solutions, and scrambled clues. Streamlined solving experience for users with seamless puzzle generation and solution presentation.
+NOTE. For more information on how the program works, read the provided text and images below:
+Info How does it work?
+The program first prompts the user to enter a list of appropriate words. This can be done by entering them in the command line, or passing them in through a ." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:55793/posts/crossword/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-11-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-11-01T00:00:00+00:00" />
+
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:55793/posts/crossword/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Portfolio
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="https://drive.google.com/file/d/1rE5IOnIx5gxr0zjHWyqbHEkggxSHEckp/view?usp=sharing">Resume</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/contact/">Contact</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://localhost:55793/posts/crossword/">
+              Crossword Puzzle Generator
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2023-11-01T00:00:00Z">
+                November 1, 2023
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              13-minute read
+            </span>
+          </div>
+          <div class="authors">
+  <i class="fa-solid fa-user" aria-hidden="true"></i>
+    <a href="/authors/ignacio-sadurni/">Ignacio Sadurni</a></div>
+
+          
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/crossword-puzzle/">Crossword Puzzle</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/fundamentals-of-computing/">Fundamentals of Computing</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/c/">C</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <p>Developed a Crossword Puzzle Generator in C, allowing user word inputs for puzzle creation Implemented functionality to generate puzzles, solutions, and scrambled clues. Streamlined solving experience for users with seamless puzzle generation and solution presentation.</p>
+<hr>
+<p><strong>NOTE.</strong> For more information on how the program works, read the provided text and images below:</p>
+<div class="notice info">
+  <div class="notice-title">
+    <i class="fa-solid fa-exclamation-circle" aria-hidden="true"></i>Info
+  </div>
+  <div class="notice-content"><p><strong>How does it work?</strong></p>
+<ol>
+<li>
+<p>The program first prompts the user to enter a list of appropriate words. This can be done by entering them in the command line, or passing them in through a .txt file as a command line argument. The list is terminated by a single period.</p>
+</li>
+<li>
+<p>Then the program generates a crossword puzzle as well as its solution and list of scrambled clues. The algorithm fits as many words as possible. These are outputted to the command line and can be saved in a file.</p>
+</li>
+</ol></div>
+</div>
+
+<p><strong>COMMAND LINE INPUT.</strong> The following is a sample of what the input process looks like:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">Anagram Crossword Puzzle Generator
+</span></span><span class="line"><span class="cl">----------------------------------
+</span></span><span class="line"><span class="cl">Enter a list of words:
+</span></span><span class="line"><span class="cl">ignacio
+</span></span><span class="line"><span class="cl">computer
+</span></span><span class="line"><span class="cl">science
+</span></span><span class="line"><span class="cl">engineering
+</span></span><span class="line"><span class="cl">notredame
+</span></span><span class="line"><span class="cl">puertorico
+</span></span><span class="line"><span class="cl">python
+</span></span><span class="line"><span class="cl">coding
+</span></span><span class="line"><span class="cl">github
+</span></span><span class="line"><span class="cl">programming
+</span></span><span class="line"><span class="cl">.
+</span></span><span class="line"><span class="cl">Note: 2 word(s) do not fit on the board.</span></span></code></pre></div>
+<p><strong>COMMAND LINE OUTPUT.</strong> The following is a sample of what the ouput in command line looks like:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">Crossword Puzzle:       Solution:               Clues:
+</span></span><span class="line"><span class="cl">-----------------       -----------------       2,   2  Across  IONGDC
+</span></span><span class="line"><span class="cl">|######### #####|       |.........P.....|       2,   7  Across  ENGGEINRNIE
+</span></span><span class="line"><span class="cl">|## ###### #####|       |..S......Y.....|       2,  10  Across  RUTMPCOE
+</span></span><span class="line"><span class="cl">|##      # #####|       |..CODING.T.....|       4,   4  Across  IUOROTPREC
+</span></span><span class="line"><span class="cl">|## ###### #####|       |..I......H.....|       4,  13  Across  ONEDAEMRT
+</span></span><span class="line"><span class="cl">|## #          #|       |..E.PUERTORICO.|       2,   1  Down    NCIESCE
+</span></span><span class="line"><span class="cl">|## # #### #####|       |..N.R....N.....|       4,   4  Down    MNAIRRGMGPO
+</span></span><span class="line"><span class="cl">|## # ##########|       |..C.O..........|       9,   0  Down    NTOHPY
+</span></span><span class="line"><span class="cl">|##           ##|       |..ENGINEERING..|
+</span></span><span class="line"><span class="cl">|#### ##########|       |....R..........|
+</span></span><span class="line"><span class="cl">|#### ##########|       |....A..........|
+</span></span><span class="line"><span class="cl">|##        #####|       |..COMPUTER.....|
+</span></span><span class="line"><span class="cl">|#### ##########|       |....M..........|
+</span></span><span class="line"><span class="cl">|#### ##########|       |....I..........|
+</span></span><span class="line"><span class="cl">|####         ##|       |....NOTREDAME..|
+</span></span><span class="line"><span class="cl">|#### ##########|       |....G..........|
+</span></span><span class="line"><span class="cl">-----------------       -----------------</span></span></code></pre></div>
+<p><strong>SOURCE CODE.</strong> The following is written in C programming language and interpreted using gcc compiler:</p>
+
+
+
+
+
+<div class="tabs tabs-code tabs-left">
+  
+
+
+
+
+<style>
+  .tabs input#tab-0-0:checked ~ .tab-content-0-0 {
+    display: block;
+  }
+</style>
+
+<input type="radio" class="tab-input" name="tab-select-0" id="tab-0-0" checked/>
+<label for="tab-0-0" class="tab-label">Makefile</label>
+<div class="tab-content tab-content-0-0">
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="nv">CMP</span> <span class="o">=</span> gcc
+</span></span><span class="line"><span class="cl"><span class="nv">MAIN</span> <span class="o">=</span> crossword
+</span></span><span class="line"><span class="cl"><span class="nv">FUNC</span> <span class="o">=</span> crosswordfunc
+</span></span><span class="line"><span class="cl"><span class="nv">EXEC</span> <span class="o">=</span> runcrossword
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">$(</span>EXEC<span class="k">)</span>: <span class="k">$(</span>FUNC<span class="k">)</span>.o <span class="k">$(</span>MAIN<span class="k">)</span>.o 
+</span></span><span class="line"><span class="cl">	<span class="k">$(</span>CMP<span class="k">)</span> <span class="k">$(</span>FUNC<span class="k">)</span>.o <span class="k">$(</span>MAIN<span class="k">)</span>.o -lm -o <span class="k">$(</span>EXEC<span class="k">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">$(</span>FUNC<span class="k">)</span>.o: <span class="k">$(</span>FUNC<span class="k">)</span>.c <span class="k">$(</span>FUNC<span class="k">)</span>.h 
+</span></span><span class="line"><span class="cl">	<span class="k">$(</span>CMP<span class="k">)</span> -c <span class="k">$(</span>FUNC<span class="k">)</span>.c -o <span class="k">$(</span>FUNC<span class="k">)</span>.o 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">$(</span>MAIN<span class="k">)</span>.o: <span class="k">$(</span>MAIN<span class="k">)</span>.c <span class="k">$(</span>FUNC<span class="k">)</span>.h
+</span></span><span class="line"><span class="cl">	<span class="k">$(</span>CMP<span class="k">)</span> -c <span class="k">$(</span>MAIN<span class="k">)</span>.c -o <span class="k">$(</span>MAIN<span class="k">)</span>.o 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">clean:
+</span></span><span class="line"><span class="cl">	rm *.o
+</span></span><span class="line"><span class="cl">	rm <span class="k">$(</span>EXEC<span class="k">)</span>
+</span></span></code></pre></div>
+</div>
+
+
+
+
+
+
+
+<style>
+  .tabs input#tab-0-1:checked ~ .tab-content-0-1 {
+    display: block;
+  }
+</style>
+
+<input type="radio" class="tab-input" name="tab-select-0" id="tab-0-1" />
+<label for="tab-0-1" class="tab-label">Main Driver</label>
+<div class="tab-content tab-content-0-1">
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="c1">// Author: Ignacio Sadurni
+</span></span></span><span class="line"><span class="cl"><span class="c1">// Date: 10/31/2023
+</span></span></span><span class="line"><span class="cl"><span class="c1">// Subject: Lab 8
+</span></span></span><span class="line"><span class="cl"><span class="c1">// Program: Crossword Puzzle (Main Driver)
+</span></span></span><span class="line"><span class="cl"><span class="c1">// This program asks the user for an input of max 20 words and it generates a crossword puzzle.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="cp"># include &lt;stdio.h&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cp"># include &lt;stdlib.h&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cp"># include &lt;string.h&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cp"># include &#34;crosswordfunc.h&#34;
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span> <span class="c1">// count number of arguments
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// initialize variables
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kt">char</span> <span class="n">board</span><span class="p">[</span><span class="n">size</span><span class="p">][</span><span class="n">size</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">char</span> <span class="n">old_words</span><span class="p">[</span><span class="mi">20</span><span class="p">][</span><span class="n">size</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">char</span> <span class="n">words</span><span class="p">[</span><span class="mi">20</span><span class="p">][</span><span class="n">size</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">word_count</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">create_board</span><span class="p">(</span><span class="n">board</span><span class="p">);</span> <span class="c1">// call function to create game board
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">if</span><span class="p">(</span><span class="n">argc</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// mode 1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="n">word_count</span> <span class="o">=</span> <span class="nf">get_words</span><span class="p">(</span><span class="n">old_words</span><span class="p">);</span> <span class="c1">// call function to get words and filter them in an array
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="nf">to_caps</span><span class="p">(</span><span class="n">old_words</span><span class="p">,</span> <span class="n">word_count</span><span class="p">);</span> <span class="c1">// call function to change letters to caps
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="nf">sort_words</span><span class="p">(</span><span class="n">old_words</span><span class="p">,</span> <span class="n">words</span><span class="p">,</span> <span class="n">word_count</span><span class="p">);</span> <span class="c1">// call function to sort words in order of length
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="kt">int</span> <span class="n">index_direction</span><span class="p">[</span><span class="n">word_count</span><span class="p">][</span><span class="mi">3</span><span class="p">];</span> <span class="c1">// initialize index and direction array
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">word_count</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// set values to 0
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">				<span class="n">index_direction</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">word_to_board</span><span class="p">(</span><span class="n">words</span><span class="p">,</span> <span class="n">board</span><span class="p">,</span>  <span class="n">word_count</span><span class="p">,</span> <span class="n">index_direction</span><span class="p">);</span> <span class="c1">// call function to put first word in board
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="nf">all_words</span><span class="p">(</span><span class="n">word_count</span><span class="p">,</span> <span class="n">words</span><span class="p">,</span> <span class="n">index_direction</span><span class="p">,</span> <span class="n">board</span><span class="p">);</span> <span class="c1">// call function to put all words in board
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="nf">display_board</span><span class="p">(</span><span class="n">board</span><span class="p">);</span> <span class="c1">// call function to display board
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="nf">clues</span><span class="p">(</span><span class="n">words</span><span class="p">,</span> <span class="n">word_count</span><span class="p">,</span> <span class="n">index_direction</span><span class="p">);</span> <span class="c1">// call function to display clues
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">argc</span> <span class="o">==</span> <span class="mi">2</span> <span class="o">||</span> <span class="n">argc</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// mode 2 and 3
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="n">FILE</span> <span class="o">*</span><span class="n">fp</span> <span class="o">=</span> <span class="nf">fopen</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="s">&#34;w&#34;</span><span class="p">);</span> <span class="c1">// open file for writing for mode 3
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="n">word_count</span> <span class="o">=</span> <span class="nf">read_file</span><span class="p">(</span><span class="n">argv</span><span class="p">,</span> <span class="n">old_words</span><span class="p">);</span> <span class="c1">// call function to read file for words
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="nf">to_caps</span><span class="p">(</span><span class="n">old_words</span><span class="p">,</span> <span class="n">word_count</span><span class="p">);</span> <span class="c1">// call function to turn words to caps
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="nf">sort_words</span><span class="p">(</span><span class="n">old_words</span><span class="p">,</span> <span class="n">words</span><span class="p">,</span> <span class="n">word_count</span><span class="p">);</span> <span class="c1">// call function to sort words
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="kt">int</span> <span class="n">index_direction</span><span class="p">[</span><span class="n">word_count</span><span class="p">][</span><span class="mi">3</span><span class="p">];</span> <span class="c1">// initialize index and direction array
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">word_count</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// set values to 0
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">				<span class="n">index_direction</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">word_to_board</span><span class="p">(</span><span class="n">words</span><span class="p">,</span> <span class="n">board</span><span class="p">,</span> <span class="n">word_count</span><span class="p">,</span> <span class="n">index_direction</span><span class="p">);</span> <span class="c1">// call function to put first word in board
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="nf">all_words</span><span class="p">(</span><span class="n">word_count</span><span class="p">,</span> <span class="n">words</span><span class="p">,</span> <span class="n">index_direction</span><span class="p">,</span> <span class="n">board</span><span class="p">);</span> <span class="c1">// call function to put all words in board
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="nf">display_board</span><span class="p">(</span><span class="n">board</span><span class="p">);</span> <span class="c1">// call function to display board
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="nf">clues</span><span class="p">(</span><span class="n">words</span><span class="p">,</span> <span class="n">word_count</span><span class="p">,</span> <span class="n">index_direction</span><span class="p">);</span> <span class="c1">// call function to display clues
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">if</span><span class="p">(</span><span class="n">argc</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// for mode 3...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="nf">display_board2</span><span class="p">(</span><span class="n">board</span><span class="p">,</span> <span class="n">fp</span><span class="p">);</span> <span class="c1">// call function to display board in output file
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="nf">clues2</span><span class="p">(</span><span class="n">words</span><span class="p">,</span> <span class="n">word_count</span><span class="p">,</span> <span class="n">index_direction</span><span class="p">,</span> <span class="n">fp</span><span class="p">);</span> <span class="c1">// call function to display clues in output file
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="nf">system</span><span class="p">(</span><span class="s">&#34;clear&#34;</span><span class="p">);</span> <span class="c1">// to clear command window
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">else</span> <span class="p">{</span> <span class="c1">// display error for invalid inputs
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Error: Invalid Amount of Inputs</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
+</div>
+
+
+
+
+
+
+
+<style>
+  .tabs input#tab-0-2:checked ~ .tab-content-0-2 {
+    display: block;
+  }
+</style>
+
+<input type="radio" class="tab-input" name="tab-select-0" id="tab-0-2" />
+<label for="tab-0-2" class="tab-label">Functions</label>
+<div class="tab-content tab-content-0-2">
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="c1">// Author: Ignacio Sadurni
+</span></span></span><span class="line"><span class="cl"><span class="c1">// Date: 10/31/2023
+</span></span></span><span class="line"><span class="cl"><span class="c1">// Subject: Lab 8
+</span></span></span><span class="line"><span class="cl"><span class="c1">// Program: Crossword (Functions File)
+</span></span></span><span class="line"><span class="cl"><span class="c1">// This is the functions file for the crossword puzzle.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="cp"># include &#34;crosswordfunc.h&#34;
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">get_words</span><span class="p">(</span><span class="kt">char</span> <span class="n">words</span><span class="p">[][</span><span class="n">size</span><span class="p">])</span> <span class="p">{</span> <span class="c1">// FUNCTION TO GET USER INPUT (WORDS)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">Anagram Crossword Puzzle Generator</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;----------------------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">word_count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">bool</span> <span class="n">subtract</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span> <span class="c1">// flag to subtract off total word count
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Enter a list of words:</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// loop until user enters 20 words or period
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%s&#34;</span><span class="p">,</span> <span class="n">words</span><span class="p">[</span><span class="n">word_count</span><span class="p">]);</span> <span class="c1">// read in the word into the array
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="nf">getc</span><span class="p">(</span><span class="n">stdin</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span><span class="p">(</span><span class="nf">strlen</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="n">word_count</span><span class="p">])</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="o">&amp;&amp;</span> <span class="n">words</span><span class="p">[</span><span class="n">word_count</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="sc">&#39;.&#39;</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// check if word is 1 character long
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Error: Word Ignored (Error: Word Ignored (Contains less than 2 characters)</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span> <span class="c1">// display error message
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="n">words</span><span class="p">[</span><span class="n">word_count</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;\0&#39;</span><span class="p">;</span> <span class="c1">// nullify character
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="n">subtract</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span> <span class="c1">// flag true to subtract off total word count
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="nf">strlen</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="n">word_count</span><span class="p">]);</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// cycle through letters of word
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="k">if</span><span class="p">(</span><span class="nf">isalpha</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="n">word_count</span><span class="p">][</span><span class="n">i</span><span class="p">])</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">words</span><span class="p">[</span><span class="n">word_count</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="sc">&#39;\0&#39;</span> <span class="o">&amp;&amp;</span> <span class="n">words</span><span class="p">[</span><span class="n">word_count</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="sc">&#39;.&#39;</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// check if words contains non alphabetical character
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>				<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Error: Word Ignored (Contains non alphabetical character(s))</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span> <span class="c1">// display error message
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>				<span class="n">subtract</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span> <span class="c1">// flag true to subtract off total word count
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>				<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="n">size</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// cycle through letters of word
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>					<span class="n">words</span><span class="p">[</span><span class="n">word_count</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;\0&#39;</span><span class="p">;</span> <span class="c1">// nullify characters
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>					<span class="n">i</span><span class="o">=</span><span class="n">size</span><span class="p">;</span> <span class="c1">// end loop
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>				<span class="p">}</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span><span class="p">(</span><span class="nf">strcmp</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="n">word_count</span><span class="p">],</span> <span class="s">&#34;.&#34;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="k">break</span><span class="p">;</span> <span class="c1">// if user inputs a period end loop
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">if</span><span class="p">(</span><span class="n">word_count</span> <span class="o">==</span> <span class="mi">19</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// if user inputs 20 words end loop
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="n">word_count</span><span class="o">++</span><span class="p">;</span> <span class="c1">// update word count before exitting
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="n">word_count</span><span class="o">++</span><span class="p">;</span> <span class="c1">// update word count and continue
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">if</span><span class="p">(</span><span class="n">subtract</span> <span class="o">==</span> <span class="nb">true</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// if flag was set to true...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="n">word_count</span><span class="o">--</span><span class="p">;</span> <span class="c1">// subtract off word count
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="n">subtract</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span> <span class="c1">// reset flag to false
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">word_count</span><span class="p">;</span> <span class="c1">// return total number of words
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">to_caps</span><span class="p">(</span><span class="kt">char</span> <span class="n">words</span><span class="p">[][</span><span class="n">size</span><span class="p">],</span> <span class="kt">int</span> <span class="n">word_count</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// FUNCTION TO CHANGE WORDS TO CAPS
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">w</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">w</span><span class="o">&lt;</span><span class="n">word_count</span><span class="p">;</span> <span class="n">w</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// cycle thorugh all words
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">l</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">l</span><span class="o">&lt;</span><span class="nf">strlen</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="n">w</span><span class="p">]);</span> <span class="n">l</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// cycle through all letters
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="n">words</span><span class="p">[</span><span class="n">w</span><span class="p">][</span><span class="n">l</span><span class="p">]</span> <span class="o">=</span> <span class="nf">toupper</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="n">w</span><span class="p">][</span><span class="n">l</span><span class="p">]);</span> <span class="c1">// change each character to uppercase
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">sort_words</span><span class="p">(</span><span class="kt">char</span> <span class="n">old_words</span><span class="p">[][</span><span class="n">size</span><span class="p">],</span> <span class="kt">char</span> <span class="n">words</span><span class="p">[][</span><span class="n">size</span><span class="p">],</span> <span class="kt">int</span> <span class="n">word_count</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// FUNCTION TO SORT WORDS IN ORDER OF LENGTH
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">size</span><span class="p">;</span> <span class="n">i</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// i = number of letters, start at maximmum possible
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="n">word_count</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// cycle through words
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="k">if</span><span class="p">(</span><span class="nf">strlen</span><span class="p">(</span><span class="n">old_words</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="o">==</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// if word contains i amount of letters, add to new word array
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>				<span class="nf">strcpy</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="n">count</span><span class="p">],</span> <span class="n">old_words</span><span class="p">[</span><span class="n">j</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">				<span class="n">count</span><span class="o">++</span><span class="p">;</span> <span class="c1">// update counter
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">create_board</span><span class="p">(</span><span class="kt">char</span> <span class="n">board</span><span class="p">[][</span><span class="n">size</span><span class="p">])</span> <span class="p">{</span> <span class="c1">// FUNCTION TO FILL EMPTY BOARD
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">x</span><span class="o">&lt;</span><span class="n">size</span><span class="p">;</span> <span class="n">x</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// cycle through all rows and cols of board array
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">y</span><span class="o">&lt;</span><span class="n">size</span><span class="p">;</span> <span class="n">y</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="n">board</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;.&#39;</span><span class="p">;</span> <span class="c1">// set each space to period
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">display_board</span><span class="p">(</span><span class="kt">char</span> <span class="n">board</span><span class="p">[][</span><span class="n">size</span><span class="p">])</span> <span class="p">{</span> <span class="c1">// FUNCTION TO DISPLAY GAME BOARD
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Solution:</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;-----------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span> <span class="c1">// display top frame
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">x</span><span class="o">&lt;</span><span class="n">size</span><span class="p">;</span> <span class="n">x</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// cycle through cols
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;|&#34;</span><span class="p">);</span> <span class="c1">// display left frame
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">y</span><span class="o">&lt;</span><span class="n">size</span><span class="p">;</span> <span class="n">y</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// cycle through rows
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%c&#34;</span><span class="p">,</span> <span class="n">board</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]);</span> <span class="c1">// display indexed characters
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;|</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span> <span class="c1">// display right frame
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;-----------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span> <span class="c1">// display bottom frame
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Crossword puzzle:</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;-----------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span> <span class="c1">// display top frame
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">size</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;|&#34;</span><span class="p">);</span> <span class="c1">// display left frame
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="n">size</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="k">if</span><span class="p">(</span><span class="n">board</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="sc">&#39;.&#39;</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// replace periods with number signs
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;#&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">			<span class="k">else</span> <span class="p">{</span> <span class="c1">// replace characters with spaces
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>				<span class="nf">printf</span><span class="p">(</span><span class="s">&#34; &#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;|</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span> <span class="c1">// display right frame
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;-----------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span> <span class="c1">// display bottom frame
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">display_board2</span><span class="p">(</span><span class="kt">char</span> <span class="n">board</span><span class="p">[][</span><span class="n">size</span><span class="p">],</span> <span class="n">FILE</span> <span class="o">*</span><span class="n">fp</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// FUNCTION TO DISPLAY GAME BOARD IN OUTPUT FILE
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nf">fprintf</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="s">&#34;Solution:</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">fprintf</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="s">&#34;-----------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span> <span class="c1">// display top frame
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">x</span><span class="o">&lt;</span><span class="n">size</span><span class="p">;</span> <span class="n">x</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// cycle through cols
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="nf">fprintf</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="s">&#34;|&#34;</span><span class="p">);</span> <span class="c1">// display left frame
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">y</span><span class="o">&lt;</span><span class="n">size</span><span class="p">;</span> <span class="n">y</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// cycle through rows
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="nf">fprintf</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="s">&#34;%c&#34;</span><span class="p">,</span> <span class="n">board</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]);</span> <span class="c1">// display indexed characters
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">fprintf</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="s">&#34;|</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span> <span class="c1">// display right frame
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">fprintf</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="s">&#34;-----------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span> <span class="c1">// display bottom frame
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nf">fprintf</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="s">&#34;Crossword puzzle:</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">fprintf</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="s">&#34;-----------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span> <span class="c1">// display top frame
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">size</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">fprintf</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="s">&#34;|&#34;</span><span class="p">);</span> <span class="c1">// display left frame
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="n">size</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="k">if</span><span class="p">(</span><span class="n">board</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="sc">&#39;.&#39;</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// replace periods with number signs
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="nf">fprintf</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="s">&#34;#&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">			<span class="k">else</span> <span class="p">{</span> <span class="c1">// replace characters with spaces
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>				<span class="nf">fprintf</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="s">&#34; &#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">fprintf</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="s">&#34;|</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span> <span class="c1">// display right frame
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">fprintf</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="s">&#34;-----------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span> <span class="c1">// display bottom frame
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">word_to_board</span><span class="p">(</span><span class="kt">char</span> <span class="n">words</span><span class="p">[][</span><span class="n">size</span><span class="p">],</span> <span class="kt">char</span> <span class="n">board</span><span class="p">[][</span><span class="n">size</span><span class="p">],</span> <span class="kt">int</span> <span class="n">word_count</span><span class="p">,</span> <span class="kt">int</span> <span class="n">index_direction</span><span class="p">[</span><span class="n">word_count</span><span class="p">][</span><span class="mi">3</span><span class="p">])</span> <span class="p">{</span> <span class="c1">// FUNCTION TO PLACE 1ST  WORD
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kt">int</span> <span class="n">original_index</span> <span class="o">=</span> <span class="mi">7</span><span class="o">-</span><span class="nf">strlen</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span> <span class="c1">// find coloumn index for first word
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kt">int</span> <span class="n">index</span> <span class="o">=</span> <span class="n">original_index</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">index_direction</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">index</span><span class="p">;</span> <span class="c1">// first index is for the word; second index 0=col, 1=row, 2=direction (direction 1 is across and 2 is down)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">index_direction</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">index_direction</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="nf">strlen</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// cycle through letters of word 1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="n">board</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="mi">7</span><span class="p">]</span> <span class="o">=</span> <span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">];</span> <span class="c1">// place letters in board
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="n">index</span><span class="o">++</span><span class="p">;</span> <span class="c1">// update counter
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">clues</span><span class="p">(</span><span class="kt">char</span> <span class="n">words</span><span class="p">[][</span><span class="n">size</span><span class="p">],</span> <span class="kt">int</span> <span class="n">word_count</span><span class="p">,</span> <span class="kt">int</span> <span class="n">index_direction</span><span class="p">[</span><span class="n">word_count</span><span class="p">][</span><span class="mi">3</span><span class="p">])</span> <span class="p">{</span> <span class="c1">// FUNCTION TO DISPLAY CLUES
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Clues:</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">o</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">o</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">;</span> <span class="n">o</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// cycle for num of directions
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">k</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">k</span><span class="o">&lt;</span><span class="mi">15</span><span class="p">;</span> <span class="n">k</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// cycle for x coordinate
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">d</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">d</span><span class="o">&lt;</span><span class="mi">15</span><span class="p">;</span> <span class="n">d</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// cycle for y coordinate
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>				<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">word_count</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// cycle through all words
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>					<span class="k">if</span><span class="p">(</span><span class="n">index_direction</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span>  <span class="o">&amp;&amp;</span> <span class="n">index_direction</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">k</span> <span class="o">&amp;&amp;</span> <span class="n">index_direction</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">d</span> <span class="o">&amp;&amp;</span> <span class="n">o</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// if word is across...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>						<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%2d, %2d  Across  %s</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">index_direction</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">index_direction</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="nf">strfry</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="n">i</span><span class="p">]));</span> <span class="c1">// display clue
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>					<span class="p">}</span>
+</span></span><span class="line"><span class="cl">					<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">index_direction</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span> <span class="o">&amp;&amp;</span> <span class="n">index_direction</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">k</span> <span class="o">&amp;&amp;</span> <span class="n">index_direction</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">d</span> <span class="o">&amp;&amp;</span> <span class="n">o</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// if word is down...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>						<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%2d, %2d  Down    %s</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">index_direction</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">index_direction</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="nf">strfry</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="n">i</span><span class="p">]));</span> <span class="c1">// display clue
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>					<span class="p">}</span>
+</span></span><span class="line"><span class="cl">				<span class="p">}</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">clues2</span><span class="p">(</span><span class="kt">char</span> <span class="n">words</span><span class="p">[][</span><span class="n">size</span><span class="p">],</span> <span class="kt">int</span> <span class="n">word_count</span><span class="p">,</span> <span class="kt">int</span> <span class="n">index_direction</span><span class="p">[</span><span class="n">word_count</span><span class="p">][</span><span class="mi">3</span><span class="p">],</span> <span class="n">FILE</span> <span class="o">*</span><span class="n">fp</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// FUNCTION TO DISPLAY CLUES IN OUTPUT FILE
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nf">fprintf</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="s">&#34;Clues:</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">o</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">o</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">;</span> <span class="n">o</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// cycle for num of directions
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">k</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">k</span><span class="o">&lt;</span><span class="mi">15</span><span class="p">;</span> <span class="n">k</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// cycle for x coordinate
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">d</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">d</span><span class="o">&lt;</span><span class="mi">15</span><span class="p">;</span> <span class="n">d</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// cycle for y coordinate
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>				<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">word_count</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// cycle through all words
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>					<span class="k">if</span><span class="p">(</span><span class="n">index_direction</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span>  <span class="o">&amp;&amp;</span> <span class="n">index_direction</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">k</span> <span class="o">&amp;&amp;</span> <span class="n">index_direction</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">d</span> <span class="o">&amp;&amp;</span> <span class="n">o</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// if word is across...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>						<span class="nf">fprintf</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="s">&#34;%2d, %2d  Across  %s</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">index_direction</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">index_direction</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="nf">strfry</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="n">i</span><span class="p">]));</span> <span class="c1">// display clue
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>					<span class="p">}</span>
+</span></span><span class="line"><span class="cl">					<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">index_direction</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span> <span class="o">&amp;&amp;</span> <span class="n">index_direction</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">k</span> <span class="o">&amp;&amp;</span> <span class="n">index_direction</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">d</span> <span class="o">&amp;&amp;</span> <span class="n">o</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// if word is down...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>						<span class="nf">fprintf</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="s">&#34;%2d, %2d  Down    %s</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">index_direction</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">index_direction</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="nf">strfry</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="n">i</span><span class="p">]));</span> <span class="c1">// display clue
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>					<span class="p">}</span>
+</span></span><span class="line"><span class="cl">				<span class="p">}</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">fprintf</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="s">&#34;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">read_file</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[],</span> <span class="kt">char</span> <span class="n">words</span><span class="p">[][</span><span class="n">size</span><span class="p">])</span> <span class="p">{</span> <span class="c1">// FUNCTION TO READ FILE
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kt">char</span> <span class="n">file_name</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">word_count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">strcpy</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span> <span class="c1">// gets file name
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">FILE</span> <span class="o">*</span><span class="n">fp</span> <span class="o">=</span> <span class="nf">fopen</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="s">&#34;r&#34;</span><span class="p">);</span> <span class="c1">// reads file
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">fp</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// test file name
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Error: Invalid File Name</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span> <span class="c1">// display error for invalid file
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">Anagram Crossword Puzzle Generator</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;----------------------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">char</span> <span class="n">string</span><span class="p">[</span><span class="n">size</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">bool</span> <span class="n">skip</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// loops indefinetly
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="nf">fgets</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">fp</span><span class="p">);</span> <span class="c1">// read string
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="n">string</span><span class="p">[</span><span class="nf">strlen</span><span class="p">(</span><span class="n">string</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;\0&#39;</span><span class="p">;</span> <span class="c1">// eliminate null character
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%s</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">string</span><span class="p">);</span> <span class="c1">// display words
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="nf">strlen</span><span class="p">(</span><span class="n">string</span><span class="p">);</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="k">if</span><span class="p">(</span><span class="nf">isalpha</span><span class="p">(</span><span class="n">string</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">i</span><span class="o">!=</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// display error for non alphabetical characters
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>				<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Error: Word Ignored (Contains non alphabetical character(s))</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">				<span class="n">skip</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span><span class="p">(</span><span class="n">string</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="sc">&#39;.&#39;</span><span class="p">)</span> <span class="k">break</span><span class="p">;</span> <span class="c1">// when a period is read, break loop
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span><span class="p">(</span><span class="nf">strlen</span><span class="p">(</span><span class="n">string</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// display error for strings of 1 character
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Error: Word Ignored (Contains less than 2 characters)</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">skip</span><span class="p">)</span> <span class="n">skip</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span> <span class="c1">// to skip else statement
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="nf">strcpy</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="n">word_count</span><span class="p">],</span> <span class="n">string</span><span class="p">);</span> <span class="c1">// copy string to word array
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="n">word_count</span><span class="o">++</span><span class="p">;</span> <span class="c1">// increase word count
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">word_count</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">all_words</span><span class="p">(</span><span class="kt">int</span> <span class="n">word_count</span><span class="p">,</span> <span class="kt">char</span> <span class="n">words</span><span class="p">[][</span><span class="n">size</span><span class="p">],</span> <span class="kt">int</span> <span class="n">index_direction</span><span class="p">[</span><span class="n">word_count</span><span class="p">][</span><span class="mi">3</span><span class="p">],</span> <span class="kt">char</span> <span class="n">board</span><span class="p">[][</span><span class="n">size</span><span class="p">])</span> <span class="p">{</span> <span class="c1">// FUNCTION TO ADD THE REST OF THE WORDS
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kt">bool</span> <span class="n">done</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">bool</span> <span class="n">bounds</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span> <span class="c1">// set to false when make function
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kt">int</span> <span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="n">direction</span><span class="p">,</span> <span class="n">word_length</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">zeros1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">zeros2</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">done</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// keeps looping in order to come back to skipped words and fit maximum amount of words
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">w</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">w</span><span class="o">&lt;</span><span class="n">word_count</span><span class="p">;</span> <span class="n">w</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// cycles through words
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="k">if</span><span class="p">(</span><span class="n">index_direction</span><span class="p">[</span><span class="n">w</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// check for words not in board
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>				<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">l</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">l</span><span class="o">&lt;</span><span class="nf">strlen</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="n">w</span><span class="p">]);</span> <span class="n">l</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// cycles through letters of words not in board
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>					<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">y</span><span class="o">&lt;</span><span class="n">word_count</span><span class="p">;</span> <span class="n">y</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// cycles through words
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>						<span class="k">if</span><span class="p">(</span><span class="n">index_direction</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">||</span> <span class="n">index_direction</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// if word is in board
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>							<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">u</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">u</span><span class="o">&lt;</span><span class="nf">strlen</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="n">y</span><span class="p">]);</span> <span class="n">u</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// cycle through letters of word in board
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>								<span class="k">if</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">u</span><span class="p">]</span> <span class="o">==</span> <span class="n">words</span><span class="p">[</span><span class="n">w</span><span class="p">][</span><span class="n">l</span><span class="p">])</span> <span class="p">{</span> <span class="c1">// if letters match
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>									<span class="k">if</span><span class="p">(</span><span class="n">index_direction</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// ADDING VERTICAL WORD
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>										
+</span></span><span class="line"><span class="cl">										<span class="n">col</span> <span class="o">=</span> <span class="n">index_direction</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">u</span><span class="p">;</span> <span class="c1">// col index for first letter of new word
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>										<span class="n">row</span> <span class="o">=</span> <span class="n">index_direction</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">l</span><span class="p">;</span> <span class="c1">// row index for first letter of new word
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>										<span class="n">direction</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">// direction of new word, vertical
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>										<span class="n">word_length</span> <span class="o">=</span> <span class="nf">strlen</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="n">w</span><span class="p">]);</span> <span class="c1">// word length of new word
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">										<span class="n">bounds</span> <span class="o">=</span> <span class="nf">check_bounds</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="n">board</span><span class="p">,</span> <span class="n">direction</span><span class="p">,</span> <span class="n">word_length</span><span class="p">,</span> <span class="n">l</span><span class="p">);</span> <span class="c1">// check bounds for new word
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>									
+</span></span><span class="line"><span class="cl">										<span class="k">if</span><span class="p">(</span><span class="n">bounds</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// if the bounds are valid, set index and direction of new word
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>											<span class="n">index_direction</span><span class="p">[</span><span class="n">w</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">											<span class="n">index_direction</span><span class="p">[</span><span class="n">w</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">col</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">											<span class="n">index_direction</span><span class="p">[</span><span class="n">w</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">row</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">											<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">s</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">s</span><span class="o">&lt;</span><span class="nf">strlen</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="n">w</span><span class="p">]);</span> <span class="n">s</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// to print word in board
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>												<span class="n">board</span><span class="p">[</span><span class="n">col</span><span class="p">][</span><span class="n">row</span><span class="p">]</span> <span class="o">=</span> <span class="n">words</span><span class="p">[</span><span class="n">w</span><span class="p">][</span><span class="n">s</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">												<span class="n">row</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">											<span class="p">}</span>
+</span></span><span class="line"><span class="cl">											<span class="n">w</span><span class="o">=</span><span class="mi">100</span><span class="p">;</span> <span class="n">y</span><span class="o">=</span><span class="mi">100</span><span class="p">;</span> <span class="n">u</span><span class="o">=</span><span class="mi">100</span><span class="p">;</span> <span class="n">l</span><span class="o">=</span><span class="mi">100</span><span class="p">;</span> <span class="c1">// end all for loops
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>										<span class="p">}</span>
+</span></span><span class="line"><span class="cl">									<span class="p">}</span>
+</span></span><span class="line"><span class="cl">									<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">index_direction</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// ADDING HORIZONTAL WORD
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">										<span class="n">col</span> <span class="o">=</span> <span class="n">index_direction</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">l</span><span class="p">;</span> <span class="c1">// col index for first letter of new word
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>										<span class="n">row</span> <span class="o">=</span> <span class="n">index_direction</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">u</span><span class="p">;</span> <span class="c1">// row index for first letter of new word
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>										<span class="n">direction</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// direction of new word, horizontal
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>										<span class="n">word_length</span> <span class="o">=</span> <span class="nf">strlen</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="n">w</span><span class="p">]);</span> <span class="c1">// word length of new word
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">										<span class="n">bounds</span> <span class="o">=</span> <span class="nf">check_bounds</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="n">board</span><span class="p">,</span> <span class="n">direction</span><span class="p">,</span> <span class="n">word_length</span><span class="p">,</span> <span class="n">l</span><span class="p">);</span> <span class="c1">// checl bounds for new word
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		
+</span></span><span class="line"><span class="cl">										<span class="k">if</span><span class="p">(</span><span class="n">bounds</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// if the bounds are valid, set index and direction of new word
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>											<span class="n">index_direction</span><span class="p">[</span><span class="n">w</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">											<span class="n">index_direction</span><span class="p">[</span><span class="n">w</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">col</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">											<span class="n">index_direction</span><span class="p">[</span><span class="n">w</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">row</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">											<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">t</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">t</span><span class="o">&lt;</span><span class="nf">strlen</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="n">w</span><span class="p">]);</span> <span class="n">t</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// to print word in board
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>												<span class="n">board</span><span class="p">[</span><span class="n">col</span><span class="p">][</span><span class="n">row</span><span class="p">]</span> <span class="o">=</span> <span class="n">words</span><span class="p">[</span><span class="n">w</span><span class="p">][</span><span class="n">t</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">												<span class="n">col</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">											<span class="p">}</span>
+</span></span><span class="line"><span class="cl">											<span class="n">w</span><span class="o">=</span><span class="mi">100</span><span class="p">;</span> <span class="n">y</span><span class="o">=</span><span class="mi">100</span><span class="p">;</span> <span class="n">u</span><span class="o">=</span><span class="mi">100</span><span class="p">;</span> <span class="n">l</span><span class="o">=</span><span class="mi">100</span><span class="p">;</span> <span class="c1">// end all for loops
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>										<span class="p">}</span>
+</span></span><span class="line"><span class="cl">									<span class="p">}</span>
+</span></span><span class="line"><span class="cl">								<span class="p">}</span>
+</span></span><span class="line"><span class="cl">							<span class="p">}</span>
+</span></span><span class="line"><span class="cl">						<span class="p">}</span>
+</span></span><span class="line"><span class="cl">					<span class="p">}</span>
+</span></span><span class="line"><span class="cl">				<span class="p">}</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="n">zeros1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">v</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">v</span><span class="o">&lt;</span><span class="n">word_count</span><span class="p">;</span> <span class="n">v</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// to end while loop, if no new word was added to board end while loop
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="k">if</span><span class="p">(</span><span class="n">index_direction</span><span class="p">[</span><span class="n">v</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">				<span class="n">zeros1</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span><span class="p">(</span><span class="n">zeros1</span> <span class="o">==</span> <span class="n">zeros2</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// compare number of words not in board before and after every iteration of while loop
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="n">done</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span> <span class="c1">// if no new words were added set to true and end loop
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="n">zeros2</span> <span class="o">=</span> <span class="n">zeros1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span><span class="p">(</span><span class="n">zeros2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// display note if words dont fit in board
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Note: %d word(s) do not fit in the board.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">zeros1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">bool</span> <span class="nf">check_bounds</span><span class="p">(</span><span class="kt">int</span> <span class="n">col</span><span class="p">,</span> <span class="kt">int</span> <span class="n">row</span><span class="p">,</span> <span class="kt">char</span> <span class="n">board</span><span class="p">[][</span><span class="n">size</span><span class="p">],</span> <span class="kt">int</span> <span class="n">direction</span><span class="p">,</span> <span class="kt">int</span> <span class="n">word_length</span><span class="p">,</span> <span class="kt">int</span> <span class="n">in</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// FUNCTION TO CHECK FOR BOUNDS
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kt">bool</span> <span class="n">bounds</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span><span class="p">(</span><span class="n">direction</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// for new vertical words
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">word_length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// go through its letters
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="k">if</span><span class="p">(</span><span class="n">board</span><span class="p">[</span><span class="n">col</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">row</span><span class="o">+</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="sc">&#39;.&#39;</span> <span class="o">&amp;&amp;</span> <span class="n">i</span><span class="o">!=</span><span class="n">in</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// check left column
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>				<span class="n">bounds</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">			<span class="k">if</span><span class="p">(</span><span class="n">board</span><span class="p">[</span><span class="n">col</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">row</span><span class="o">+</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="sc">&#39;.&#39;</span> <span class="o">&amp;&amp;</span> <span class="n">i</span><span class="o">!=</span><span class="n">in</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// check right column
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>				<span class="n">bounds</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span><span class="p">(</span><span class="n">board</span><span class="p">[</span><span class="n">col</span><span class="p">][</span><span class="n">row</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="sc">&#39;.&#39;</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// check for character above
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="n">bounds</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span><span class="p">(</span><span class="n">board</span><span class="p">[</span><span class="n">col</span><span class="p">][</span><span class="n">row</span><span class="o">+</span><span class="n">word_length</span><span class="p">]</span> <span class="o">!=</span> <span class="sc">&#39;.&#39;</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// check for character below
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="n">bounds</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span><span class="p">(</span><span class="n">row</span><span class="o">&lt;</span><span class="mi">0</span> <span class="o">||</span> <span class="n">row</span><span class="o">+</span><span class="n">word_length</span><span class="o">-</span><span class="mi">1</span><span class="o">&gt;</span><span class="mi">14</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// check array walls
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="n">bounds</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span><span class="p">(</span><span class="n">direction</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// for new horizontal words
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="n">word_length</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="k">if</span><span class="p">(</span><span class="n">board</span><span class="p">[</span><span class="n">col</span><span class="o">+</span><span class="n">j</span><span class="p">][</span><span class="n">row</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="sc">&#39;.&#39;</span> <span class="o">&amp;&amp;</span> <span class="n">j</span><span class="o">!=</span><span class="n">in</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// check top row
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>				<span class="n">bounds</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">			<span class="k">if</span><span class="p">(</span><span class="n">board</span><span class="p">[</span><span class="n">col</span><span class="o">+</span><span class="n">j</span><span class="p">][</span><span class="n">row</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="sc">&#39;.&#39;</span> <span class="o">&amp;&amp;</span> <span class="n">j</span><span class="o">!=</span><span class="n">in</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// check bottom row
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>				<span class="n">bounds</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span><span class="p">(</span><span class="n">board</span><span class="p">[</span><span class="n">col</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">row</span><span class="p">]</span> <span class="o">!=</span> <span class="sc">&#39;.&#39;</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// check for character to the left
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="n">bounds</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span><span class="p">(</span><span class="n">board</span><span class="p">[</span><span class="n">col</span><span class="o">+</span><span class="n">word_length</span><span class="p">][</span><span class="n">row</span><span class="p">]</span> <span class="o">!=</span> <span class="sc">&#39;.&#39;</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// check for character to the right
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="n">bounds</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span><span class="p">(</span><span class="n">col</span><span class="o">&lt;</span><span class="mi">0</span> <span class="o">||</span> <span class="n">col</span><span class="o">+</span><span class="n">word_length</span><span class="o">-</span><span class="mi">1</span><span class="o">&gt;</span><span class="mi">14</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// check array walls
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="n">bounds</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">bounds</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
+</div>
+
+
+
+
+</div>
+
+
+
+
+      </div>
+
+
+      <footer>
+        
+
+<section class="see-also">
+  
+    
+    
+    
+  
+</section>
+
+
+        
+        
+        
+        
+        
+
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2024
+     Ignacio Sadurní 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

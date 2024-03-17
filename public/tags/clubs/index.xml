@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Clubs on Ignacio Sadurni</title>
+    <link>http://localhost:59556/tags/clubs/</link>
+    <description>Recent content in Clubs on Ignacio Sadurni</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 11 Jul 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:59556/tags/clubs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Clubs and Organizations</title>
+      <link>http://localhost:59556/posts/clubs-organizations/</link>
+      <pubDate>Tue, 11 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:59556/posts/clubs-organizations/</guid>
+      <description>pie title Personal Commitment &#34;CS for Good&#34; : 35 &#34;ColorStack&#34; : 30 &#34;SHPE&#34; : 10 &#34;LHS&#34;: 10 &#34;Building Bridges&#34; : 10 &#34;PRSAND&#34; : 5 Computer Science for Good Link to heading Member since Fall 2023&#xA;Color Stack Link to heading Since Fall 2023&#xA;Society of Hispanic Professional Engineers Link to heading Since Fall 2023&#xA;Latino Honors Society Link to heading Since Fall 2022&#xA;Building Bridges Link to heading Since Fall 2023</description>
+    </item>
+  </channel>
+</rss>

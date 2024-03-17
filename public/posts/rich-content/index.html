@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=55793&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  Flappy Ball Game · Portfolio
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Ignacio Sadurní">
+<meta name="description" content="A brief description of Hugo Shortcodes">
+<meta name="keywords" content="blog,developer,personal">
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Flappy Ball Game"/>
+<meta name="twitter:description" content="A brief description of Hugo Shortcodes"/>
+
+<meta property="og:title" content="Flappy Ball Game" />
+<meta property="og:description" content="A brief description of Hugo Shortcodes" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:55793/posts/rich-content/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-11-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-11-01T00:00:00+00:00" />
+
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:55793/posts/rich-content/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Portfolio
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="https://drive.google.com/file/d/1rE5IOnIx5gxr0zjHWyqbHEkggxSHEckp/view?usp=sharing">Resume</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/contact/">Contact</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://localhost:55793/posts/rich-content/">
+              Flappy Ball Game
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2023-11-01T00:00:00Z">
+                November 1, 2023
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              7-minute read
+            </span>
+          </div>
+          <div class="authors">
+  <i class="fa-solid fa-user" aria-hidden="true"></i>
+    <a href="/authors/ignacio-sadurni/">Ignacio Sadurni</a></div>
+
+          
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/game/">Game</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/c/">C</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/xquartz/">XQuartz</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <p>Designed Flappy Bird game in C, incorporating player controls, obstacle generation, and scoring mechanics. Implemented XQuartz for graphics and animations, enhancing visual experience. Implemented precise collision detection to ensure accurate interaction between player and obstacles.</p>
+<hr>
+<p><strong>NOTE.</strong> For more information on how the game works, read the info below:</p>
+<p><strong>SOURCE CODE.</strong> The following is written in C programming language and interpreted using gcc compiler:</p>
+
+
+
+
+
+<div class="tabs tabs-code tabs-left">
+  
+
+
+
+
+<style>
+  .tabs input#tab-0-0:checked ~ .tab-content-0-0 {
+    display: block;
+  }
+</style>
+
+<input type="radio" class="tab-input" name="tab-select-0" id="tab-0-0" checked/>
+<label for="tab-0-0" class="tab-label">Makefile</label>
+<div class="tab-content tab-content-0-0">
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">project: project.c
+</span></span><span class="line"><span class="cl">	gcc project.c gfx2.o -lX11 -lm -o project
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">clean:
+</span></span><span class="line"><span class="cl">	rm project 
+</span></span></code></pre></div>
+</div>
+
+
+
+
+
+
+
+<style>
+  .tabs input#tab-0-1:checked ~ .tab-content-0-1 {
+    display: block;
+  }
+</style>
+
+<input type="radio" class="tab-input" name="tab-select-0" id="tab-0-1" />
+<label for="tab-0-1" class="tab-label">Main Driver</label>
+<div class="tab-content tab-content-0-1">
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="c1">// Author: Ignacio Sadurni
+</span></span></span><span class="line"><span class="cl"><span class="c1">// Date: 12.8.2023
+</span></span></span><span class="line"><span class="cl"><span class="c1">// Lab 11 (Mini) Final Project
+</span></span></span><span class="line"><span class="cl"><span class="c1">// This program is a simple game where the ball must fly between the green pipes for as long as you can, obtaining a higher score.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="cp"># include &lt;stdio.h&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cp"># include &lt;stdbool.h&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cp"># include &lt;unistd.h&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cp"># include &lt;stdlib.h&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cp"># include &lt;stdio.h&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cp"># include &lt;math.h&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cp"># include &#34;gfx2.h&#34;
+</span></span></span><span class="line"><span class="cl"><span class="cp"># define width 800
+</span></span></span><span class="line"><span class="cl"><span class="cp"># define height 600
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">game_speed</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">gravity</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span> <span class="n">Modes</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// FUNCTION PROTOTYPES /////////////////////////////////////////////////////////////////////////
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">draw_pipe</span><span class="p">(</span><span class="kt">int</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">draw_ball</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kt">bool</span> <span class="nf">check_bounds</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">disp_menu</span><span class="p">(</span><span class="kt">bool</span><span class="p">,</span> <span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">disp_rules</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// MAIN DRIVER /////////////////////////////////////////////////////////////////////////////////
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">// declare variables
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">Modes</span> <span class="n">settings</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span> <span class="c1">// use struct for difficulty settings
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">settings</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">game_speed</span> <span class="o">=</span> <span class="mi">50000</span><span class="p">;</span> <span class="c1">// game speed for easy mode
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">settings</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">game_speed</span> <span class="o">=</span> <span class="mi">25000</span><span class="p">;</span> <span class="c1">// game speed for hard mode
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">settings</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">gravity</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">settings</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">gravity</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">bool</span> <span class="n">first</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">score</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">high_score</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">mode</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">gfx_open</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="s">&#34;Mini Project&#34;</span><span class="p">);</span> <span class="c1">// open tab
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nf">gfx_clear_color</span><span class="p">(</span><span class="mi">102</span><span class="p">,</span><span class="mi">204</span><span class="p">,</span><span class="mi">255</span><span class="p">);</span> <span class="c1">// background color to blue
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">	<span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Runs until user quits app by pressing q in the menu
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// declare variables that reset to original value:
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="kt">bool</span> <span class="n">over</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span> <span class="c1">// flag for game while it is not over
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="kt">bool</span> <span class="n">down</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span> <span class="c1">// flag to indicate direction of ball
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="kt">int</span> <span class="n">x_pipe</span> <span class="o">=</span> <span class="n">width</span><span class="p">;</span> <span class="c1">// position of pipe (x)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">200</span><span class="p">;</span> <span class="c1">// position of ball (x)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="n">height</span><span class="o">/</span><span class="mi">4</span><span class="p">;</span> <span class="c1">// position of ball (y)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// counter
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span><span class="p">(</span><span class="n">high_score</span> <span class="o">&lt;</span> <span class="n">score</span><span class="p">)</span> <span class="n">high_score</span> <span class="o">=</span> <span class="n">score</span><span class="p">;</span> <span class="c1">// updates high score
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="nf">disp_menu</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">high_score</span><span class="p">,</span> <span class="n">mode</span><span class="p">);</span> <span class="c1">// call function to display menu
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">		<span class="kt">char</span> <span class="n">input</span> <span class="o">=</span> <span class="nf">gfx_wait</span><span class="p">();</span> <span class="c1">// get user input
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span><span class="p">(</span><span class="n">input</span> <span class="o">==</span> <span class="sc">&#39;r&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="nf">disp_rules</span><span class="p">();</span> <span class="c1">// if user presses r call function to display rules
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="n">over</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">input</span> <span class="o">==</span> <span class="sc">&#39;q&#39;</span><span class="p">)</span> <span class="k">break</span><span class="p">;</span> <span class="c1">// quit app
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">input</span> <span class="o">==</span> <span class="sc">&#39;d&#39;</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// change difficulty
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="k">if</span><span class="p">(</span><span class="n">mode</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="n">mode</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">mode</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="n">mode</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="n">over</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="n">score</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// set score to 0
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">		<span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">over</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Loop runs the actual game
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="k">if</span><span class="p">(</span><span class="n">mode</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="nf">usleep</span><span class="p">(</span><span class="n">settings</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">game_speed</span><span class="p">);</span> <span class="c1">// create delay for easy mode
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">mode</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="nf">usleep</span><span class="p">(</span><span class="n">settings</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">game_speed</span><span class="p">);</span> <span class="c1">// create delay for hard mode
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="n">input</span> <span class="o">=</span> <span class="sc">&#39;0&#39;</span><span class="p">;</span> <span class="c1">// reset user input
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="nf">gfx_clear</span><span class="p">();</span> <span class="c1">// clear screen
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="nf">draw_ball</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">);</span> <span class="c1">// call function to draw ball
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="nf">draw_pipe</span><span class="p">(</span><span class="n">x_pipe</span><span class="p">);</span> <span class="c1">// call function to draw pipe
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="nf">gfx_flush</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">			<span class="k">if</span><span class="p">(</span><span class="nf">gfx_event_waiting</span><span class="p">())</span> <span class="p">{</span> <span class="c1">// if user presses key in game
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>				<span class="n">input</span> <span class="o">=</span> <span class="nf">gfx_wait</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">			<span class="k">if</span><span class="p">(</span><span class="nf">abs</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">x_pipe</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">60</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// check if ball is within bounds of pipe
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>				<span class="n">over</span> <span class="o">=</span> <span class="nf">check_bounds</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">x_pipe</span><span class="p">);</span> <span class="c1">// calls function to check height of ball
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">			<span class="k">if</span><span class="p">(</span><span class="n">input</span> <span class="o">==</span> <span class="sc">&#39; &#39;</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// is user presses space key
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>				<span class="n">down</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span> <span class="c1">// set down to false, indicating that the ball must go up
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">			<span class="n">x_pipe</span> <span class="o">-=</span> <span class="mi">20</span><span class="p">;</span> <span class="c1">// move pipe to the left
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="n">score</span><span class="o">++</span><span class="p">;</span> <span class="c1">// increase score
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">			<span class="k">if</span><span class="p">(</span><span class="n">x_pipe</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// if pipe reaches the left of the screen
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>				<span class="n">x_pipe</span> <span class="o">=</span> <span class="n">width</span><span class="p">;</span> <span class="c1">// change pipe position to the right side of the screen
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">			<span class="k">switch</span><span class="p">(</span><span class="n">down</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">				<span class="k">case</span> <span class="nb">true</span><span class="o">:</span> <span class="c1">// if ball is going down, increase y
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>					<span class="k">if</span><span class="p">(</span><span class="n">mode</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="n">y</span><span class="o">+=</span><span class="n">settings</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">gravity</span><span class="p">;</span> <span class="c1">// easy mode gravity
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>					<span class="k">else</span> <span class="n">y</span><span class="o">+=</span><span class="n">settings</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">gravity</span><span class="p">;</span> <span class="c1">// hard mode gravity
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>					<span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">				<span class="k">case</span> <span class="nb">false</span><span class="o">:</span> <span class="c1">// if ball is going up, decrease y
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>					<span class="k">if</span><span class="p">(</span><span class="n">mode</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="n">y</span><span class="o">-=</span><span class="n">settings</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">gravity</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">					<span class="k">else</span> <span class="n">y</span><span class="o">-=</span><span class="n">settings</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">gravity</span><span class="o">-</span><span class="mi">5</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">					<span class="n">count</span><span class="o">++</span><span class="p">;</span> <span class="c1">// update counter
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>				<span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>	
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">			<span class="k">if</span><span class="p">(</span><span class="n">count</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// when counter is 10, change direction of ball to go down again
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>				<span class="n">down</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">				<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">			<span class="n">first</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span> <span class="c1">// indicates it is not the first iteration
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// FUNCTIONS ///////////////////////////////////////////////////////////////////////////////////
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">draw_pipe</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// This function draws both green pipes
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nf">gfx_color</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">gfx_fill_rectangle</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">200</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">gfx_fill_rectangle</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">25</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">gfx_fill_rectangle</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">475</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">gfx_fill_rectangle</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="mi">375</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">25</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">gfx_color</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">gfx_rectangle</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">200</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">gfx_rectangle</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">25</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">gfx_rectangle</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">475</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">gfx_rectangle</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="mi">375</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">25</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">draw_ball</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// This function draws the yellow ball
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nf">gfx_color</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">26</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">gfx_fill_circle</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="mi">20</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">gfx_color</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">gfx_circle</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="mi">20</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">bool</span> <span class="nf">check_bounds</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">,</span> <span class="kt">int</span> <span class="n">x_pipe</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// This function check the bounds to see if the ball touched the pipe
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">if</span><span class="p">(</span><span class="n">y</span><span class="o">-</span><span class="mi">20</span><span class="o">&lt;=</span><span class="mi">225</span> <span class="o">||</span> <span class="n">y</span><span class="o">+</span><span class="mi">20</span><span class="o">&gt;=</span><span class="mi">375</span><span class="p">)</span> <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">disp_menu</span><span class="p">(</span><span class="kt">bool</span> <span class="n">first</span><span class="p">,</span> <span class="kt">int</span> <span class="n">score</span><span class="p">,</span> <span class="kt">int</span> <span class="n">mode</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// This function displays the menu
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nf">gfx_clear</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">gfx_color</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">gfx_text</span><span class="p">(</span><span class="mi">310</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="s">&#34;WELCOME TO FLAPPY BALL!!!&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">gfx_text</span><span class="p">(</span><span class="mi">310</span><span class="p">,</span><span class="mi">300</span><span class="p">,</span><span class="s">&#34;Press any key to continue&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">gfx_text</span><span class="p">(</span><span class="mi">310</span><span class="p">,</span><span class="mi">320</span><span class="p">,</span><span class="s">&#34;Press r to view the rules&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">gfx_text</span><span class="p">(</span><span class="mi">310</span><span class="p">,</span><span class="mi">340</span><span class="p">,</span><span class="s">&#34;Press q to quit the game!&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">gfx_text</span><span class="p">(</span><span class="mi">310</span><span class="p">,</span><span class="mi">360</span><span class="p">,</span><span class="s">&#34;Press d to alter gamemode&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">draw_ball</span><span class="p">(</span><span class="mi">330</span><span class="p">,</span><span class="mi">250</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">draw_ball</span><span class="p">(</span><span class="mi">620</span><span class="p">,</span><span class="mi">300</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">draw_pipe</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">draw_pipe</span><span class="p">(</span><span class="mi">625</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span><span class="p">(</span><span class="n">first</span> <span class="o">==</span> <span class="nb">false</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// After the first game the score is displayed in the menu
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="kt">char</span> <span class="n">scoreChar</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">sprintf</span><span class="p">(</span><span class="n">scoreChar</span><span class="p">,</span> <span class="s">&#34;High Score: %d&#34;</span><span class="p">,</span> <span class="n">score</span><span class="p">);</span> <span class="c1">// Converts score (int) to a string
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="nf">gfx_text</span><span class="p">(</span><span class="mi">335</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="n">scoreChar</span><span class="p">);</span> <span class="c1">// displays high score
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span><span class="p">(</span><span class="n">mode</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="nf">gfx_text</span><span class="p">(</span><span class="mi">355</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="s">&#34;Easy Mode&#34;</span><span class="p">);</span> <span class="c1">// display difficulty / gamemode
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">mode</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="nf">gfx_text</span><span class="p">(</span><span class="mi">355</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="s">&#34;Hard Mode&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">gfx_flush</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">disp_rules</span><span class="p">()</span> <span class="p">{</span> <span class="c1">// This function displays the rules
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nf">gfx_clear</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">gfx_color</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">gfx_text</span><span class="p">(</span><span class="mi">270</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="s">&#34;The yellow ball will descend over time&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">gfx_text</span><span class="p">(</span><span class="mi">270</span><span class="p">,</span><span class="mi">250</span><span class="p">,</span><span class="s">&#34;Press space to jump or &#39;flap&#39;  upwards&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">gfx_text</span><span class="p">(</span><span class="mi">270</span><span class="p">,</span><span class="mi">300</span><span class="p">,</span><span class="s">&#34;You cannot hit the moving green pipes!&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">gfx_text</span><span class="p">(</span><span class="mi">270</span><span class="p">,</span><span class="mi">400</span><span class="p">,</span><span class="s">&#34;Helpful tip: do not spam the space key&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">gfx_text</span><span class="p">(</span><span class="mi">270</span><span class="p">,</span><span class="mi">450</span><span class="p">,</span><span class="s">&#34;Press any key to continue, have fun!!!&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">draw_ball</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span><span class="mi">300</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">draw_pipe</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">draw_pipe</span><span class="p">(</span><span class="mi">625</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">gfx_wait</span><span class="p">();</span> 
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
+</div>
+
+
+
+
+
+
+
+<style>
+  .tabs input#tab-0-2:checked ~ .tab-content-0-2 {
+    display: block;
+  }
+</style>
+
+<input type="radio" class="tab-input" name="tab-select-0" id="tab-0-2" />
+<label for="tab-0-2" class="tab-label">GFX</label>
+<div class="tab-content tab-content-0-2">
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="c1">// gfx2.h
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="cp">#ifndef GFX2_H
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define GFX2_H
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;X11/Xlib.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;X11/cursorfont.h&gt; </span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Open a new graphics window. 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">gfx_open</span><span class="p">(</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">title</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Flush all previous output to the window. 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">gfx_flush</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Change the current drawing color. 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">gfx_color</span><span class="p">(</span> <span class="kt">int</span> <span class="n">red</span><span class="p">,</span> <span class="kt">int</span> <span class="n">green</span><span class="p">,</span> <span class="kt">int</span> <span class="n">blue</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Clear the graphics window to the background color. 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">gfx_clear</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Change the current background color. 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">gfx_clear_color</span><span class="p">(</span> <span class="kt">int</span> <span class="n">red</span><span class="p">,</span> <span class="kt">int</span> <span class="n">green</span><span class="p">,</span> <span class="kt">int</span> <span class="n">blue</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Check to see if an event is waiting. 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="nf">gfx_event_waiting</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Wait for the user to press a key or mouse button. 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">char</span> <span class="nf">gfx_wait</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Return the X and Y coordinates of the last event. 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="nf">gfx_xpos</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">gfx_ypos</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Return the X and Y dimensions of the screen (monitor). 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="nf">gfx_xsize</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">gfx_ysize</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Draw a point at (x,y) 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">gfx_point</span><span class="p">(</span> <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Draw a line from (x1,y1) to (x2,y2) 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">gfx_line</span><span class="p">(</span> <span class="kt">int</span> <span class="n">x1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">x2</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y2</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Draw a circle centered at (xc,yc) with radius r 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">gfx_circle</span><span class="p">(</span> <span class="kt">int</span> <span class="n">xc</span><span class="p">,</span> <span class="kt">int</span> <span class="n">yc</span><span class="p">,</span> <span class="kt">int</span> <span class="n">r</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Display a string at (x,y) 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">gfx_text</span><span class="p">(</span> <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span> <span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">text</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// -----------------------------
+</span></span></span><span class="line"><span class="cl"><span class="c1">// new functions added 10/4/23:
+</span></span></span><span class="line"><span class="cl"><span class="c1">// -----------------------------
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Draw a filled circle centered at (xc,yc) with radius r 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">gfx_fill_circle</span><span class="p">(</span> <span class="kt">int</span> <span class="n">xc</span><span class="p">,</span> <span class="kt">int</span> <span class="n">yc</span><span class="p">,</span> <span class="kt">int</span> <span class="n">r</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Draw an ellipse centered at (xc,yc) with radii r1 and r2 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">gfx_ellipse</span><span class="p">(</span> <span class="kt">int</span> <span class="n">xc</span><span class="p">,</span> <span class="kt">int</span> <span class="n">yc</span><span class="p">,</span> <span class="kt">int</span> <span class="n">r1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">r2</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">// Draw an arc whose top left corner of its bounding rectangle is at (x,y),
+</span></span></span><span class="line"><span class="cl"><span class="c1">//  with width w and height h, starting at angle a1 and sweeping an angle of a2 (degrees);
+</span></span></span><span class="line"><span class="cl"><span class="c1">//  a1 of 0 is at the 3 O&#39;Clock position, and the a2 sweep is positive counter-clockwise 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">gfx_arc</span><span class="p">(</span> <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">,</span> <span class="kt">int</span> <span class="n">w</span><span class="p">,</span> <span class="kt">int</span> <span class="n">h</span><span class="p">,</span> <span class="kt">int</span> <span class="n">a1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">a2</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Draw a filled arc (similar description to gfx_arc)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">gfx_fill_arc</span><span class="p">(</span> <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">,</span> <span class="kt">int</span> <span class="n">w</span><span class="p">,</span> <span class="kt">int</span> <span class="n">h</span><span class="p">,</span> <span class="kt">int</span> <span class="n">a1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">a2</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Draw a rectangle with top-left corner at (x,y) with width w and height h 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">gfx_rectangle</span><span class="p">(</span> <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">,</span> <span class="kt">int</span> <span class="n">w</span><span class="p">,</span> <span class="kt">int</span> <span class="n">h</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Draw a filled rectangle (similar description to gfx_rectangle)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">gfx_fill_rectangle</span><span class="p">(</span> <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">,</span> <span class="kt">int</span> <span class="n">w</span><span class="p">,</span> <span class="kt">int</span> <span class="n">h</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Draw a polygon whose &#34;num_pts&#34; number of corners are in the &#34;pointsarr&#34; array
+</span></span></span><span class="line"><span class="cl"><span class="c1">//  (note: uses Xlib&#39;s XPoint struct) 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">gfx_polygon</span><span class="p">(</span> <span class="n">XPoint</span> <span class="o">*</span><span class="n">pointsarr</span><span class="p">,</span> <span class="kt">int</span> <span class="n">num_pts</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Draw a filled polygon (similar description to gfx_polygon)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">gfx_fill_polygon</span><span class="p">(</span> <span class="n">XPoint</span> <span class="o">*</span><span class="n">pointsarr</span><span class="p">,</span> <span class="kt">int</span> <span class="n">num_pts</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Change the font that gfx_text will use 
+</span></span></span><span class="line"><span class="cl"><span class="c1">//   (see the file /usr/share/X11/fonts/misc/fonts.alias for possible fonts)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">gfx_changefont</span><span class="p">(</span> <span class="kt">char</span> <span class="o">*</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// change the cursor (mouse pointer)
+</span></span></span><span class="line"><span class="cl"><span class="c1">//   (see the file /usr/include/X11/cursorfont.h for possible cursors)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">gfx_changecursor</span><span class="p">(</span> <span class="kt">int</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">#endif
+</span></span></span></code></pre></div>
+</div>
+
+
+
+
+</div>
+
+
+
+
+      </div>
+
+
+      <footer>
+        
+
+<section class="see-also">
+  
+    
+    
+    
+  
+</section>
+
+
+        
+        
+        
+        
+        
+
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2024
+     Ignacio Sadurní 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Courses on Ignacio Sadurni</title>
+    <link>http://localhost:59556/tags/courses/</link>
+    <description>Recent content in Courses on Ignacio Sadurni</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 05 Jul 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:59556/tags/courses/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Courses and Curriculum</title>
+      <link>http://localhost:59556/posts/courses-and-curriculum/</link>
+      <pubDate>Wed, 05 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:59556/posts/courses-and-curriculum/</guid>
+      <description>Bachelor of Engineering in The University of Notre Dame with a minor in Engineering Corporate Practice. GPA: 3.4666&#xA;Fall 2022 Link to heading Total Credits: 16&#xA;Intro to Chemical Principles (4 Credits) Calculus I Engineering Design Principles of Microeconomics Spring 2023 Link to heading Total Credits: 18&#xA;Engineering Physics I (4 Credits) Calculus II Engineering Computing Islamic Law University Seminar Foundations of Theology Fall 2023 Link to heading Total Credits: 17.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ignacio Sad on Portfolio</title>
+    <link>http://localhost:62212/authors/ignacio-sad/</link>
+    <description>Recent content in Ignacio Sad on Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 11 Jul 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:62212/authors/ignacio-sad/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Clubs and Organizations</title>
+      <link>http://localhost:62212/posts/more-rich-content/</link>
+      <pubDate>Tue, 11 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:62212/posts/more-rich-content/</guid>
+      <description>Text.&#xA;Computer Science for Good Link to heading Question Why am I part of this organization? Color Stack Link to heading As a member of the Color Stack Family and the Chapter in Notre Dame, I&#xA;Society of Hispanic Professional Engineers Link to heading Latino Honors Society Link to heading Building Bridges Link to heading Puerto Rican Student Association at Notre Dame Link to heading Note One note here. Tip I&amp;rsquo;m giving a tip about something.</description>
+    </item>
+  </channel>
+</rss>

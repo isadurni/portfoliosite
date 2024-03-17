@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Theme Demo on Portfolio</title>
+    <link>http://localhost:57311/categories/theme-demo/</link>
+    <description>Recent content in Theme Demo on Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 01 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:57311/categories/theme-demo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Live Weather Forecast Shell Script</title>
+      <link>http://localhost:57311/posts/weather-script/</link>
+      <pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:57311/posts/weather-script/</guid>
+      <description>Implemented Shell commands in Linux for generating live weather forecasts. Enabled user input of zip codes to fetch real-time data and display current conditions. Provided concise forecast summaries for enhanced user experience.&#xA;NOTE. For more information on how the program works, read the provided text and images below:&#xA;SOURCE CODE. The following is a file written in shell script:&#xA;#!/bin/sh # Globals URL=&amp;#34;https://forecast.weather.gov/zipcity.php&amp;#34; ZIPCODE=46556 FORECAST=0 CELSIUS=0 # Functions usage() { cat 1&amp;gt;&amp;amp;2 &amp;lt;&amp;lt;EOF Usage: $(basename $0) [zipcode] -c Use Celsius degrees instead of Fahrenheit for temperature -f Display forecast text after the temperature If zipcode is not provided, then it defaults to $ZIPCODE.</description>
+    </item>
+    <item>
+      <title>De Paul Coding Academy</title>
+      <link>http://localhost:57311/posts/coding-academy/</link>
+      <pubDate>Sun, 09 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:57311/posts/coding-academy/</guid>
+      <description>LESSON PLAN. For an understanding of the organization of the lesson plan, look at the flow chart below:&#xA;flowchart TD A[User Input] --&gt; B{Print} B --&gt; C[Math] C --&gt; D[For Loops] C --&gt; E[While Loops] </description>
+    </item>
+    <item>
+      <title>Personal Website</title>
+      <link>http://localhost:57311/posts/personal-website/</link>
+      <pubDate>Sat, 08 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:57311/posts/personal-website/</guid>
+      <description>hi</description>
+    </item>
+  </channel>
+</rss>

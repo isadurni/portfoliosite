@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>App on Portfolio</title>
+    <link>http://localhost:55793/tags/app/</link>
+    <description>Recent content in App on Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 01 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:55793/tags/app/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Aviation Crash Report App</title>
+      <link>http://localhost:55793/posts/markdown-syntax/</link>
+      <pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:55793/posts/markdown-syntax/</guid>
+      <description>Employed MATLAB and its App Designer to develop an app for analyzing historical aviation accidents. Generated comprehensive reports on various statistics derived from global aviation accidents data. Enhanced understanding of aviation safety through detailed analysis and visualization of accident data.&#xA;NOTE. For more information on how the app works, watch the demo below:</description>
+    </item>
+  </channel>
+</rss>
