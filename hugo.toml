@@ -164,7 +164,7 @@ url = "clubs/"
 [[languages.en.menu.main]]
 name = "Resume"
 weight = 5
-url = "https://drive.google.com/file/d/1rE5IOnIx5gxr0zjHWyqbHEkggxSHEckp/view?usp=sharing"
+url = "https://docs.google.com/document/d/1X8a6wuQn5rKXpS-4D4Xd2wU4kC3IU4h78De041h5zAw/edit?usp=sharing"
 
 [[languages.en.menu.main]]
 name = "Contact"
