@@ -23,7 +23,7 @@ Total Credits: 15
 Total Credits: 18
 1. Engineering Physics I
 2. Calculus II
-3. [Engineering Computing](/tags/engineering-computing/)
+3. Engineering Computing
 4. Islamic Law University Seminar
 5. Foundations of Theology
 6. Moreau
@@ -32,13 +32,13 @@ Total Credits: 18
 Total Credits: 17.5
 1. Engineering Physics II
 2. Calculus III
-3. [Fundamentals of Computing**](/tags/fundamentals-of-computing/)
+3. Fundamentals of Computing
 4. Discrete Math
 5. Colonial Latin American History
 
 ### Spring 2024
 Total Credits: 17.5
-1. [Systems Programming**](/tags/systems-programming/)
+1. Systems Programming
 2. Linear Algebra and Differential Equations
 3. Data Structures
 4. Logic Design and Sequential Circuits
