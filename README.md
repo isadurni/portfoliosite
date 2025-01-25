@@ -5,7 +5,7 @@ Static portfolio website built with HTML and CSS
 [Check it out here!](https://isadurni.github.io/portfoliosite/)
 
 ## **About**
-This portfolio website serves as a professional showcase of my skills, projects, and experiences tailored for recruiters and potential collaborators. Designed using the Hugo Coder theme, the site features a clean, minimalist aesthetic that focuses on content and usability. It's hosted on GitHub Pages for easy access and updates.
+This portfolio website serves as a professional showcase of my skills, projects, and experiences for recruiters and potential collaborators.
 
 ## **Features**
 
