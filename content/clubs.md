@@ -30,20 +30,3 @@ In the Fall of 2023 I was assigned upperclassmen mentors within the field of Com
 ## Puerto Rican Student Association at Notre Dame
 
 Being from Puerto Rico, I joined PRSAND in the Fall of 2022, where this organizaiton has organized cultural events and fundraisers for causes related to Puerto Rican issues, as well as get togethers to eat cultural food and have a good time away from home.
-
-{{<mermaid>}}
-
-pie title Personal Commitment
-    "CS for Good" : 35
-    "ColorStack" : 30
-    "SHPE" : 10
-    "LHS": 10
-    "Building Bridges" : 10
-    "PRSAND" : 5
-
-{{</mermaid>}}
-
-
-{{< notice note >}}
-The pie chart gives a rough estimate of the time commitment and dedication to these organizations.
-{{< /notice >}}
