@@ -130,7 +130,7 @@ author = "authors"
 name = "LinkedIn"
 icon = "fa-brands fa-linkedin fa-2x"
 weight = 1
-url = "https://linkedin.com/in/ignacio-sadurni"
+url = "https://linkedin.com/in/isadurni"
 
 [[params.social]]
 name = "Github"
